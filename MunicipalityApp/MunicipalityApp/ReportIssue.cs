@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
@@ -106,7 +108,15 @@ namespace MunicipalityApp
             if (richTextBox1.Text == "Description..." && richTextBox1.ForeColor == Color.DarkGray)
             {
                 richTextBox1.Text = ""; // Clear the hint text
-                richTextBox1.ForeColor = Color.White; // Set to normal text color
+
+                if (materialSwitch1.Checked)
+                {
+                    richTextBox1.ForeColor = Color.Black;
+                }
+                else
+                {
+                    richTextBox1.ForeColor = Color.White;
+                }
             }
         }
 
@@ -214,35 +224,63 @@ namespace MunicipalityApp
                 return;
             }
 
-            // Insert data into the database
+            // Create an Issue object
+            Issue issueReport = new Issue
+            {
+                Location = location,
+                Category = category,
+                Description = description,
+                ImageData = imageBytes
+            };
+
+            // Call the method to save the issue report
+            saveIssueReport(issueReport);
+        }
+
+        //saves the reported issue to the database
+        private void saveIssueReport(Issue issueData)
+        {
+            if (issueData == null)
+            {
+                MessageBox.Show("The issue data cannot be null.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
-                using (SqlConnection connection = new SqlConnection("Your_Connection_String"))
+                using (ApplicationDbContext adc = new ApplicationDbContext())
                 {
-                    connection.Open();
+                    // Add the new issue to the Issues DbSet
+                    adc.Issues.Add(issueData);
 
-                    // SQL command to insert data
-                    string query = "INSERT INTO Issues (Location, Category, Description, Image) VALUES (@Location, @Category, @Description, @Image)";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        // Add parameters
-                        command.Parameters.AddWithValue("@Location", location);
-                        command.Parameters.AddWithValue("@Category", category);
-                        command.Parameters.AddWithValue("@Description", description);
-                        command.Parameters.AddWithValue("@Image", imageBytes);
-
-                        // Execute the insert command
-                        command.ExecuteNonQuery();
-                    }
+                    // Save changes to the database
+                    adc.SaveChanges();
                 }
 
-                MessageBox.Show("Issue successfully submitted!", "Success");
+                //show confirmation gamification screen
+                ReportIssueConfirmation notifcation = new ReportIssueConfirmation();
+                notifcation.ShowDialog();
+            }
+            catch (DbUpdateException dbEx)
+            {
+                // Handles database update errors
+                MessageBox.Show($"Database update error: {dbEx.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while saving the issue: " + ex.Message);
+                //show failure screen
+                ReportIssueFailure notifcation = new ReportIssueFailure();
+                notifcation.ShowDialog();
+
+                // Handles other possible exceptions
+                MessageBox.Show($"The unexpected Error:\n {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void materialButton4_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "Description..."; // Set the hint text
+            richTextBox1.ForeColor = Color.DarkGray; // Set the hint text color
         }
     }
 }
