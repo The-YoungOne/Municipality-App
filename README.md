@@ -41,48 +41,57 @@ Additional packages include:
 # DEVICE & SYSTEM REQUIREMENTS:
 
 Device:
+
 - Windows 7 or later operating system
+  
 - Intel Pentium 4 or AMD Athlon
+  
 - 2 GB of RAM (4 GB or more recommended for better performance)
+  
 - 100 MB of free disk space for the application itself.
+  
 - A graphics adapter with a minimum display resolution of 1024 x 768
+  
 - .NET Framework 4.7.2 or later
 
 System:
+
 - Operating System: ideally Windows, or Linux and macOS
+  
 - Visual Studio 2022 IDE
+  
 - All additional packages installed
+  
 
 ----------------------------------------------------------------------------------------------------
 
 # SPECIFICATIONS BEFORE RUNNING:
 
 Before running the application, ensure that:
+
 - All the minimum device and system requirements are met.
+  
 - .NET Core SDK is installed on your system (Visual Studio 2022).
+  
 - Ensure NuGet packages are installed (Done automatically upon building the application).
+  
 - The application builds successfully with no errors before running.
 
 ----------------------------------------------------------------------------------------------------
 
 # CORE FEATURES:
 
- User Authentication and Authorization: 
+ Reporting Issues: 
+ 
 - Allows users to register, log in, and manage their profiles. Different roles (employee, farmer) have different access levels.
 
-Employee Profile Management: 
+Gamification Feature: 
 - Employees can create, edit, and delete profiles like theirs. 
   Only an employee can create another employee profile within the system once logged in.
 
-Farmer Profile Management: 
+Information Page: 
 - Farmers can create their profiles, and wait for approval from an employee before gaining further access. 
   Upon gaining that access, farmers get access to the product features.
-
-Product Management: 
-- Farmers can add, edit, and delete their products, including details such as name, category, quantity, production date, and image.
-
-Marketplace: 
-- Farmers and employees can browse all products listed by farmers, filter products based on various criteria, and view the profile of the farmers who listed specific products.
 
 ----------------------------------------------------------------------------------------------------
 
