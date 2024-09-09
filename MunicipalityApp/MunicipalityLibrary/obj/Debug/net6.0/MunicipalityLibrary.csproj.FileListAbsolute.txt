@@ -1,0 +1,14 @@
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\bin\Debug\net6.0\MunicipalityLibrary.deps.json
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\bin\Debug\net6.0\MunicipalityLibrary.runtimeconfig.json
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\bin\Debug\net6.0\MunicipalityLibrary.dll
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\bin\Debug\net6.0\MunicipalityLibrary.pdb
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\MunicipalityLibrary.csproj.AssemblyReference.cache
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\MunicipalityLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\MunicipalityLibrary.AssemblyInfoInputs.cache
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\MunicipalityLibrary.AssemblyInfo.cs
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\MunicipalityLibrary.csproj.CoreCompileInputs.cache
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\MunicipalityLibrary.dll
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\refint\MunicipalityLibrary.dll
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\MunicipalityLibrary.pdb
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\MunicipalityLibrary.genruntimeconfig.cache
+C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityLibrary\obj\Debug\net6.0\ref\MunicipalityLibrary.dll
