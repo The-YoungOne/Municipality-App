@@ -123,9 +123,9 @@ I would like to acknowledge the support provided by the following platforms and 
 
 1. ChatGPT - For providing solutions to errors faced throughout development, as well as supportive design elements for the front-end dynamic resizing.
 
-2. Manoj Deshwal (YouTube) - For aiding with the importing and modifications of the user identities.
+2. winforms (YouTube) - For aiding with the implementation of some dynamic elements to the forms.
 
-3. tutorialsEU-C# (YoutTube) - Guiding the integration of user roles into the application, as well as creating permanent default user information.
+3. CodeCraks (YoutTube) - Aid with implementing the theme changing functionality for the app.
 
 ----------------------------------------------------------------------------------------------------
 
