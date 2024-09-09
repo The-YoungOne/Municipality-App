@@ -20,7 +20,7 @@ Thus this platform aims to provide its users with efficient and user-friendly ac
 # PURPOSE:
 
 The purpose of the MunicipalityApp is to provide an interactive space for local South Africans to be updated by their municipalities.
-This will be done via reporting various community issues, as well as keep user updated with reported solutions, events, and announcements.
+This will be done via reporting various community issues, as well as keeping user updated with reported solutions, events, and announcements.
 
 ----------------------------------------------------------------------------------------------------
 
@@ -83,29 +83,37 @@ Before running the application, ensure that:
 
  Reporting Issues: 
  
-- Allows users to register, log in, and manage their profiles. Different roles (employee, farmer) have different access levels.
+- This feature allows users to report a variety of issues that will be resolved by the municipality.
+  This may include potholes, graffiti, etc.
 
 Gamification Feature: 
-- Employees can create, edit, and delete profiles like theirs. 
-  Only an employee can create another employee profile within the system once logged in.
+
+- After successfully reporting an issue to the municipality, users are immediately recognised for their contributions
+  with a thank you message, and they earn points that are awarded to their accounts.
 
 Information Page: 
-- Farmers can create their profiles, and wait for approval from an employee before gaining further access. 
-  Upon gaining that access, farmers get access to the product features.
+
+- This page includes all the details and features that the application has. In this current stage of the app, there are
+  two key features that have not been implemented yet: the events/announcements, and service report status features.
 
 ----------------------------------------------------------------------------------------------------
 
 # FAQs:
 
-How can I register as a farmer?
-- Agri Farmer Connect offers the user the ability to register as a farmer via the registration page. 
-  Select the "Become a Farmer" text on the top right next to "log in" and fill in all the required information. You must then await the approval of your farmer account.
+How do I report an issue?
 
-Can farmers leave reviews for products?
-- Currently, the platform does not support leaving reviews for products. However, this feature may be implemented in future updates.
+- Users can report issues via the "report issue" page. You can navigate to this page by selecting the "Report an Issue" button on
+  the startup main menu. By following the prompted guidance, you will be able to successfully report an issue to the municipality.
 
-Why can I not see the marketplace?
-- The marketplace is a list of all the farmer's products made on the site. It is only available to approved farmers who have successfully logged into the system.
+Why can I not access the other features of the app?
+
+- The events/announcements, and service report status features are still currently under development. These features will be available shortly
+  over time. However, there is an alert message notifying you of the feature coming soon after selecting those buttons.
+
+Am I able to adjust the size of the form?
+
+- Yes, you can free adjust the form to fit any desired size. Each form does a minimum size allocated to it. However, every form can adapt dynamically
+  to the changing sizes you wish to have on each form.
 
 ----------------------------------------------------------------------------------------------------
 
