@@ -13,14 +13,14 @@ Lucian Sandile Young
 # INTRODUCTION:
 
 This is a municipality application built to streamline the municipal services in South Africa.
-Thus this platform aims to provide its users with efficient and user-friendly access to local municipal services.
+Thus this platform aims to provide its users efficient and user-friendly access to local municipal services.
 
 ----------------------------------------------------------------------------------------------------
 
 # PURPOSE:
 
 The purpose of the MunicipalityApp is to provide an interactive space for local South Africans to be updated by their municipalities.
-This will be done via reporting various community issues, as well as keeping user updated with reported solutions, events, and announcements.
+This will be done via reporting various community issues, as well as keeping users updated with reported solutions, events, and announcements.
 
 ----------------------------------------------------------------------------------------------------
 
@@ -112,7 +112,7 @@ Why can I not access the other features of the app?
 
 Am I able to adjust the size of the form?
 
-- Yes, you can free adjust the form to fit any desired size. Each form does a minimum size allocated to it. However, every form can adapt dynamically
+- Yes, you can freely adjust the form to fit any desired size. Each form has a minimum size allocated to it. However, every form can adapt dynamically
   to the changing sizes you wish to have on each form.
 
 ----------------------------------------------------------------------------------------------------
@@ -121,9 +121,9 @@ Am I able to adjust the size of the form?
 
 I would like to acknowledge the support provided by the following platforms and individuals:
 
-1. ChatGPT - For providing solutions to errors faced throughout development, as well as supportive design elements for the front end.
+1. ChatGPT - For providing solutions to errors faced throughout development, as well as supportive design elements for the front-end dynamic resizing.
 
-2. Manoj Deshwal (YouTube) - For aiding with the importing and modifications on the user identities.
+2. Manoj Deshwal (YouTube) - For aiding with the importing and modifications of the user identities.
 
 3. tutorialsEU-C# (YoutTube) - Guiding the integration of user roles into the application, as well as creating permanent default user information.
 
