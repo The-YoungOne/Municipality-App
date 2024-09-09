@@ -57,42 +57,10 @@ Before running the application, ensure that:
 - .NET Core SDK is installed on your system (Visual Studio 2022).
 - Ensure NuGet packages are installed (Done automatically upon building the application).
 - The application builds successfully with no errors before running.
-----------------------------------------------------------------------------------------------------
-
-STEPS BEFORE RUNNING:
-
-Below is a list of steps that can be followed to get the application running correctly:
-
-1.  Ensure Visual Studio 2022 is installed on your device.
-2.  Download the zip folder of the code.
-3.  Unzip the folder.
-4.  Navigate into the folder until finding the "AgriConnect MVC.sln".
-5.  Right-click it and select Open with -> Visual Studio 2022.
-6.  Upon opening build the program or click CNTRL and B at the same time.
-7.  Open the appsettings.json in the solution explorer.
-8.  Change the DefaultConnection to your own for your local device (you may use the connection string template under SPECIFICATIONS BEFORE RUNNING).
-9.  Open the Tools dropdown menu at the top of the window.
-10. Select "Nuget Package Manager", followed by "package manager console".
-11. Type "add-migration" followed by naming the migration (eg: add-migration FullMigrate) then click enter.
-12. Next, type "update-database" and click enter
-
-After following these steps, the application can be run. It will automatically populate the database with default data that can be tested with.
 
 ----------------------------------------------------------------------------------------------------
 
-DEFAULT PROFILE CREDENTIALS:
-
-For an Employee login:
-- Email: employee@employee.com
-- Password: Admin1234#
-
-For a Farmer login:
-- Email: john@doefarming.com
-- Password: Farmer1234#
-
-----------------------------------------------------------------------------------------------------
-
-CORE FEATURES:
+# CORE FEATURES:
 
  User Authentication and Authorization: 
 - Allows users to register, log in, and manage their profiles. Different roles (employee, farmer) have different access levels.
@@ -113,7 +81,7 @@ Marketplace:
 
 ----------------------------------------------------------------------------------------------------
 
-FAQs:
+# FAQs:
 
 How can I register as a farmer?
 - Agri Farmer Connect offers the user the ability to register as a farmer via the registration page. 
@@ -127,7 +95,7 @@ Why can I not see the marketplace?
 
 ----------------------------------------------------------------------------------------------------
 
-ACKNOWLEDGEMENTS:
+# ACKNOWLEDGEMENTS:
 
 I would like to acknowledge the support provided by the following platforms and individuals:
 
@@ -139,4 +107,4 @@ I would like to acknowledge the support provided by the following platforms and 
 
 ----------------------------------------------------------------------------------------------------
 
-REFERENCES:
+# REFERENCES:
