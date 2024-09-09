@@ -35,7 +35,16 @@ Additional packages include:
 
 # DEVICE & SYSTEM REQUIREMENTS:
 
-- Operating System: Windows, Linux, macOS
+Device:
+- Windows 7 or later operating system
+- Intel Pentium 4 or AMD Athlon
+- 2 GB of RAM (4 GB or more recommended for better performance)
+- 100 MB of free disk space for the application itself.
+- A graphics adapter with a minimum display resolution of 1024 x 768
+- .NET Framework 4.7.2 or later
+
+System:
+- Operating System: ideally Windows, or Linux and macOS
 - Visual Studio 2022 IDE
 - All additional packages installed
 
