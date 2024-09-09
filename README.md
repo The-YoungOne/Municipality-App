@@ -25,7 +25,11 @@ This will be done via reporting various community issues, as well as keep user u
 # BUILT USING:
 
 Visual Studio 2022
-- Asp.NET Core Web App (Model-View-Controller), code-first approach
+- Windows Form App (.Net Framework)
+
+Additional packages include:
+- MaterialSkin.2 (For modern User Interface (UI) designs)
+- EntityFramework (For much of the backend functionality)
 
 ----------------------------------------------------------------------------------------------------
 
