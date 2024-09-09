@@ -10,8 +10,8 @@ Lucian Sandile Young
 
 # INTRODUCTION:
 
-This project is a web application called AgriConnect_MVC, designed to facilitate connections between farmers. 
-Through this platform, farmers can showcase their products, and view the products of other farmers on the marketplace.
+This is a municipality application built to streamline the municipal services in South Africa.
+Thus this platform aims to provide its users with efficient and user-friendly access to local municipal services.
 
 ----------------------------------------------------------------------------------------------------
 
