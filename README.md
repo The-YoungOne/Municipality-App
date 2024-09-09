@@ -3,7 +3,9 @@
 
 Lucian Sandile Young
 - Student Number: ST10039287
+ 
 - Email: luyoung247@gmail.com
+  
 - ALT email: st10039287@vcconnect.edu.za
 
 ----------------------------------------------------------------------------------------------------
@@ -25,10 +27,13 @@ This will be done via reporting various community issues, as well as keep user u
 # BUILT USING:
 
 Visual Studio 2022
+
 - Windows Form App (.Net Framework)
 
 Additional packages include:
+
 - MaterialSkin.2 (For modern User Interface (UI) designs)
+  
 - EntityFramework (For much of the backend functionality)
 
 ----------------------------------------------------------------------------------------------------
