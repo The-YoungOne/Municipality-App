@@ -17,8 +17,8 @@ Thus this platform aims to provide its users with efficient and user-friendly ac
 
 # PURPOSE:
 
-The purpose of AgriConnect_MVC is to create a convenient and efficient marketplace for agricultural products, eliminating middlemen and ensuring fair prices for farmers. 
-By connecting farmers, the platform aims to promote sustainability, support local agriculture, and ensure farmers are providing high-quality, fresh produce.
+The purpose of the MunicipalityApp is to provide an interactive space for local South Africans to be updated by their municipalities.
+This will be done via reporting various community issues, as well as keep user updated with reported solutions, events, and announcements.
 
 ----------------------------------------------------------------------------------------------------
 
