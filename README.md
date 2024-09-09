@@ -33,12 +33,11 @@ Additional packages include:
 
 ----------------------------------------------------------------------------------------------------
 
-# SYSTEM REQUIREMENTS:
+# DEVICE & SYSTEM REQUIREMENTS:
 
 - Operating System: Windows, Linux, macOS
-- Web Browser: Google Chrome, Mozilla Firefox, Safari, Microsoft Edge
-- .NET Core SDK
-- Visual Studio Code or Visual Studio 2022 IDE
+- Visual Studio 2022 IDE
+- All additional packages installed
 
 ----------------------------------------------------------------------------------------------------
 
@@ -50,13 +49,7 @@ Before running the application, ensure that:
 
 - Ensure NuGet packages are installed (Done automatically upon building the application).
 
-- Change the connection string to your local database.
-  Connection string template:
-  "Server=labVMH8OX\\\\SQLEXPRESS;Database=AgriFarmer_Connect;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;"
-
-- Database migrations are applied using Entity Framework Core. 
-
-
+- The application builds successfully with no errors before running.
 ----------------------------------------------------------------------------------------------------
 
 STEPS BEFORE RUNNING:
