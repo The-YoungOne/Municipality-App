@@ -53,11 +53,9 @@ System:
 # SPECIFICATIONS BEFORE RUNNING:
 
 Before running the application, ensure that:
-
+- All the minimum device and system requirements are met.
 - .NET Core SDK is installed on your system (Visual Studio 2022).
-
 - Ensure NuGet packages are installed (Done automatically upon building the application).
-
 - The application builds successfully with no errors before running.
 ----------------------------------------------------------------------------------------------------
 
