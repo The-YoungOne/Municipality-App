@@ -31,6 +31,8 @@ namespace MunicipalityApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Size = this.MinimumSize;
+
 
         }
 
@@ -64,18 +66,18 @@ namespace MunicipalityApp
         }
 
         // Prevents the form from being able to move anywhere
-        protected override void WndProc(ref Message m)
-        {
-            const int WM_NCLBUTTONDOWN = 0xA1;
-            const int HTCAPTION = 0x2;
+        //protected override void WndProc(ref Message m)
+        //{
+        //    const int WM_NCLBUTTONDOWN = 0xA1;
+        //    const int HTCAPTION = 0x2;
 
-            if (m.Msg == WM_NCLBUTTONDOWN && m.WParam.ToInt32() == HTCAPTION)
-            {
-                return;
-            }
+        //    if (m.Msg == WM_NCLBUTTONDOWN && m.WParam.ToInt32() == HTCAPTION)
+        //    {
+        //        return;
+        //    }
 
-            base.WndProc(ref m);
-        }
+        //    base.WndProc(ref m);
+        //}
 
         private void materialButton3_Click(object sender, EventArgs e)
         {

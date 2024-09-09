@@ -108,7 +108,7 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.Location = new System.Drawing.Point(107, 87);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -120,7 +120,7 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.Location = new System.Drawing.Point(37, 121);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -330,8 +330,8 @@
             // 
             // Info
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(307, 506);
             this.Controls.Add(this.materialLabel7);
             this.Controls.Add(this.materialLabel6);
@@ -357,9 +357,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialSwitch1);
-            this.MaximizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            this.MinimumSize = new System.Drawing.Size(307, 506);
             this.Name = "Info";
-            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Information";
             this.Load += new System.EventHandler(this.Info_Load);

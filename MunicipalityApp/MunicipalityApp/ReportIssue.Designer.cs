@@ -210,8 +210,8 @@
             // 
             // ReportIssue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(307, 529);
             this.Controls.Add(this.materialButton4);
             this.Controls.Add(this.materialButton3);
@@ -222,11 +222,11 @@
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialTextBox1);
             this.Controls.Add(this.materialSwitch1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(307, 529);
             this.Name = "ReportIssue";
             this.Padding = new System.Windows.Forms.Padding(2, 64, 2, 3);
-            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report Issue";
             this.Load += new System.EventHandler(this.ReportIssue_Load);

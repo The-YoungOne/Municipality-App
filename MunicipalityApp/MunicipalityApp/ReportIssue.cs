@@ -10,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
@@ -21,6 +20,8 @@ namespace MunicipalityApp
         public ReportIssue()
         {
             InitializeComponent();
+            //exits program when close icon on top right is selected
+            this.FormClosing += new FormClosingEventHandler(Form_Closing);
 
             materialComboBox1.SelectedIndex = -1; // Ensure no default selection of a category
 
@@ -41,7 +42,7 @@ namespace MunicipalityApp
 
         private void ReportIssue_Load(object sender, EventArgs e)
         {
-
+            this.Size = this.MinimumSize;
         }
 
         //changes the theme of the app from light to dark when toggling the switch
@@ -129,35 +130,23 @@ namespace MunicipalityApp
             }
         }
 
-        byte[] imageBytes = null;
+        byte[] fileBytes = null;
         private void materialButton2_Click(object sender, EventArgs e)
         {
             // Create an OpenFileDialog instance
             OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            // Set filter to allow only image file types
-            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
 
             // Show the dialog and check if the user selected a file
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
 
-                // Validate if the selected file is an image by checking its extension
-                string extension = Path.GetExtension(filePath).ToLower();
-                if (extension == ".jpg" || extension == ".jpeg" || extension == ".png" || extension == ".bmp" || extension == ".gif")
-                {
-                    // Convert the image file to byte array
-                    imageBytes = File.ReadAllBytes(filePath);
+                // Convert the selected file to byte array, no file type restrictions
+                fileBytes = File.ReadAllBytes(filePath);
 
-                    label1.Text = "✔️ Attachment saved";
-                    label1.ForeColor = Color.Green;
-                }
-                else
-                {
-                    label1.Text = "❌ Invalid file type selected";
-                    label1.ForeColor = Color.Red;
-                }
+                // Update label to show the attachment was saved
+                label1.Text = "✔️ Attachment saved";
+                label1.ForeColor = Color.Green;
             }
             else if (openFileDialog.ShowDialog() == DialogResult.Cancel)
             {
@@ -168,113 +157,103 @@ namespace MunicipalityApp
                 label1.Text = "❌ Failed to Save Attachment";
                 label1.ForeColor = Color.Red;
             }
+
         }
 
         // Prevents the form from being able to move anywhere
-        protected override void WndProc(ref Message m)
-        {
-            const int WM_NCLBUTTONDOWN = 0xA1;
-            const int HTCAPTION = 0x2;
+        //protected override void WndProc(ref Message m)
+        //{
+        //    const int WM_NCLBUTTONDOWN = 0xA1;
+        //    const int HTCAPTION = 0x2;
 
-            if (m.Msg == WM_NCLBUTTONDOWN && m.WParam.ToInt32() == HTCAPTION)
-            {
-                return;
-            }
+        //    if (m.Msg == WM_NCLBUTTONDOWN && m.WParam.ToInt32() == HTCAPTION)
+        //    {
+        //        return;
+        //    }
 
-            base.WndProc(ref m);
-        }
+        //    base.WndProc(ref m);
+        //}
 
         private void materialButton3_Click(object sender, EventArgs e)
         {
-            string location, category, description;
-
-            if (materialTextBox1.Text.Equals(""))
-            {
-                MessageBox.Show("There is no location for the issue.", "ALERT");
-                return;
-            }
-            else
-            {
-                location = materialTextBox1.Text.ToString();
-            }
-
-            if (materialComboBox1.SelectedIndex == -1)
-            {
-                MessageBox.Show("The category for the issue is not selected.", "ALERT");
-                return;
-            }
-            else
-            {
-                category = materialComboBox1.SelectedItem?.ToString();
-            }
-
-            if (richTextBox1.Text.Equals("Description..."))
-            {
-                MessageBox.Show("There is no description of the issue being reported.", "ALERT");
-                return;
-            }
-            else
-            {
-                description = richTextBox1.Text.ToString();
-            }
-
-            if (imageBytes == null)
-            {
-                MessageBox.Show("No image selected.", "ALERT");
-                return;
-            }
-
-            // Create an Issue object
-            Issue issueReport = new Issue
-            {
-                Location = location,
-                Category = category,
-                Description = description,
-                ImageData = imageBytes
-            };
-
-            // Call the method to save the issue report
-            saveIssueReport(issueReport);
-        }
-
-        //saves the reported issue to the database
-        private void saveIssueReport(Issue issueData)
-        {
-            if (issueData == null)
-            {
-                MessageBox.Show("The issue data cannot be null.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             try
             {
-                using (ApplicationDbContext adc = new ApplicationDbContext())
-                {
-                    // Add the new issue to the Issues DbSet
-                    adc.Issues.Add(issueData);
+                string location, category, description, imageBase64;
 
-                    // Save changes to the database
-                    adc.SaveChanges();
+                // Check location
+                if (string.IsNullOrWhiteSpace(materialTextBox1.Text))
+                {
+                    MessageBox.Show("There is no location for the issue.", "ALERT");
+                    return;
+                }
+                else
+                {
+                    location = materialTextBox1.Text;
                 }
 
+                // Check category
+                if (materialComboBox1.SelectedIndex == -1)
+                {
+                    MessageBox.Show("The category for the issue is not selected.", "ALERT");
+                    return;
+                }
+                else
+                {
+                    category = materialComboBox1.SelectedItem?.ToString();
+                }
+
+                // Check description
+                if (richTextBox1.Text.Equals("Description...") || string.IsNullOrWhiteSpace(richTextBox1.Text))
+                {
+                    MessageBox.Show("There is no description of the issue being reported.", "ALERT");
+                    return;
+                }
+                else
+                {
+                    description = richTextBox1.Text;
+                }
+
+                // Check image
+                if (fileBytes == null)
+                {
+                    MessageBox.Show("No image selected.", "ALERT");
+                    return;
+                }
+                else
+                {
+                    // Convert byte[] to base64 string
+                    imageBase64 = Convert.ToBase64String(fileBytes);
+                }
+
+                //save items into a list
+                List<string> issueReportData = new List<string>
+                {
+                    location,
+                    category,
+                    description,
+                    imageBase64
+                };
+
                 //show confirmation gamification screen
-                ReportIssueConfirmation notifcation = new ReportIssueConfirmation();
+                ReportIssueConfirmation notifcation = new ReportIssueConfirmation(this);
                 notifcation.ShowDialog();
-            }
-            catch (DbUpdateException dbEx)
-            {
-                // Handles database update errors
-                MessageBox.Show($"Database update error: {dbEx.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
                 //show failure screen
-                ReportIssueFailure notifcation = new ReportIssueFailure();
+                ReportIssueFailure notifcation = new ReportIssueFailure(this);
                 notifcation.ShowDialog();
 
                 // Handles other possible exceptions
                 MessageBox.Show($"The unexpected Error:\n {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
+        }
+
+        //ends the app when the close icon on the top right is selected
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();  // This will close the entire application
         }
 
         private void materialButton4_Click(object sender, EventArgs e)

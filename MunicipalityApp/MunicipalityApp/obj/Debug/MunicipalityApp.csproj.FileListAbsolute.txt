@@ -1,12 +1,9 @@
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\MunicipalityApp.exe.config
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\MunicipalityApp.exe
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\MunicipalityApp.pdb
-C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\ClassLibrary.dll
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\EntityFramework.dll
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\MaterialSkin.dll
-C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\ClassLibrary.pdb
-C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\ClassLibrary.dll.config
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\EntityFramework.xml
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\luyou\OneDrive\Desktop\repos\MunicipalityApp\MunicipalityApp\obj\Debug\MunicipalityApp.csproj.AssemblyReference.cache

@@ -17,6 +17,8 @@ namespace MunicipalityApp
         public Info()
         {
             InitializeComponent();
+            //exits program when close icon on top right is selected
+            this.FormClosing += new FormClosingEventHandler(Form_Closing);
 
             //sets the material manager up to customize
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -27,11 +29,17 @@ namespace MunicipalityApp
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Amber700, Primary.Amber900, Primary.Amber500, Accent.Amber400, TextShade.WHITE);
         }
 
+        //ends the app when the close icon on the top right is selected
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();  // This will close the entire application
+        }
+
         MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
 
         private void Info_Load(object sender, EventArgs e)
         {
-
+            this.Size = this.MinimumSize;
         }
 
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
@@ -48,17 +56,17 @@ namespace MunicipalityApp
         }
 
         // Prevents the form from being able to move anywhere
-        protected override void WndProc(ref Message m)
-        {
-            const int WM_NCLBUTTONDOWN = 0xA1;
-            const int HTCAPTION = 0x2;
+        //protected override void WndProc(ref Message m)
+        //{
+        //    const int WM_NCLBUTTONDOWN = 0xA1;
+        //    const int HTCAPTION = 0x2;
 
-            if (m.Msg == WM_NCLBUTTONDOWN && m.WParam.ToInt32() == HTCAPTION)
-            {
-                return;
-            }
+        //    if (m.Msg == WM_NCLBUTTONDOWN && m.WParam.ToInt32() == HTCAPTION)
+        //    {
+        //        return;
+        //    }
 
-            base.WndProc(ref m);
-        }
+        //    base.WndProc(ref m);
+        //}
     }
 }

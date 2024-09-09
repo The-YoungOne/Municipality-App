@@ -12,9 +12,11 @@ namespace MunicipalityApp
 {
     public partial class ReportIssueConfirmation : Form
     {
-        public ReportIssueConfirmation()
+        private ReportIssue _reportIssueForm;
+        public ReportIssueConfirmation(ReportIssue reportIssueForm)
         {
             InitializeComponent();
+            _reportIssueForm = reportIssueForm;
         }
 
         private void ReportIssueConfirmation_Load(object sender, EventArgs e)
@@ -34,6 +36,31 @@ namespace MunicipalityApp
             }
 
             base.WndProc(ref m);
+        }
+
+       
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenu form = new MainMenu();
+            form.Show();
+            this.Close();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            // Close the ReportIssue form
+            if (_reportIssueForm != null)
+            {
+                _reportIssueForm.Close();
+            }
+
+            // Open the MainMenu form
+            MainMenu form = new MainMenu();
+            form.Show();
+
+            // Close the current confirmation form
+            this.Close();
         }
     }
 }

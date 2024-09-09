@@ -146,18 +146,18 @@
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 407);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(306, 390);
             this.Controls.Add(this.materialButton4);
             this.Controls.Add(this.materialSwitch1);
             this.Controls.Add(this.materialButton3);
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.pictureBox1);
-            this.MaximizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            this.MinimumSize = new System.Drawing.Size(306, 390);
             this.Name = "MainMenu";
-            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Municipal ZA";
             this.Load += new System.EventHandler(this.Form1_Load);
