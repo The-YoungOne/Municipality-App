@@ -2,9 +2,9 @@
 # AUTHOR:
 
 Lucian Sandile Young
-Student Number: ST10039287
-Email: luyoung247@gmail.com
-ALT email: st10039287@vcconnect.edu.za
+- Student Number: ST10039287
+- Email: luyoung247@gmail.com
+- ALT email: st10039287@vcconnect.edu.za
 
 ----------------------------------------------------------------------------------------------------
 
