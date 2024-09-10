@@ -216,7 +216,7 @@ namespace MunicipalityApp
                 // Check image
                 if (fileBytes == null)
                 {
-                    MessageBox.Show("No image selected.", "ALERT");
+                    MessageBox.Show("No media attachment selected.", "ALERT");
                     return;
                 }
                 else
