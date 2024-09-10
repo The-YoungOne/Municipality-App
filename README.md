@@ -130,3 +130,13 @@ I would like to acknowledge the support provided by the following platforms and 
 ----------------------------------------------------------------------------------------------------
 
 # REFERENCES:
+
+- CodeCraks (2021). Google’s Material Design for your windows forms | C# Tutorial. [online] YouTube. Available at: https://www.youtube.com/watch?v=EuFInLY16pg [Accessed 10 Sep. 2024].
+
+‌- winforms (2014). How to create DataBase using Entity Framework in Windows Form C#. [online] YouTube. Available at: https://www.youtube.com/watch?v=_02UEZfz764 [Accessed 10 Sep. 2024].
+
+‌- ChatGPT. (2024). Response to user query on saving an uploaded image into a database in a Windows Forms application. OpenAI ChatGPT, 7 September. Available at: https://chat.openai.com/.
+
+- C Plus+ (2020). How to Update and Save Files in C# Windows Application. [online] YouTube. Available at: https://www.youtube.com/watch?v=N-pLpzRS5es [Accessed 10 Sep. 2024].
+
+‌
